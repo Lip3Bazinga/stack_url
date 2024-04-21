@@ -12,11 +12,11 @@ using namespace std;
 
 
 
-void Url::newPage(const string& newUrl){ // Método para adicionar uma nova página.
+void Url::newPage(const string& newUrl){ // Método para adicionar uma nova página
 
   // Verifica se há uma página atual
   if(!currentPage.empty()){
-    previousPages.push(currentPage); // Empilha a página atuaal nas páginas anteriores
+    previousPages.push(currentPage); // Empilha a página atual nas páginas anteriores
     while(!posteriorPages.empty()){
       posteriorPages.pop(); // Limpa as páginas seguintes
     }
