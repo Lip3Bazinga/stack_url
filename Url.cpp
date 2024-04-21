@@ -33,7 +33,7 @@ void Url::goBack(){ // Método para voltar para a página anterior
     currentPage = previousPages.top(); // Define a página anterior como a página atual
     previousPages.pop(); // Remove a página anterior da pilha de páginas anteriores
   }else{
-    cout << "\nNão existem páginas anteriores\n";
+    cout << "\nNao existem paginas anteriores\n";
   }
 }
 
@@ -43,12 +43,12 @@ void Url::goFoward(){ // Método para avançar para a página seguinte
     currentPage = posteriorPages.top();  // Define a página seguinte como a página atual
     posteriorPages.pop();  // Remove a página seguinte da pilha de páginas seguintes
   }else{
-    cout << "\nNão existem páginas posteriores\n";
+    cout << "\nNao existem paginas posteriores\n";
   }
 }
 
 void Url::getPage(){ // Método para exibir a página atual
-  cout << "Página atual: " << currentPage << endl;
+  cout << "Pagina atual: " << currentPage << endl;
 }
 
 int main(){ // Função principal
@@ -56,7 +56,7 @@ int main(){ // Função principal
   string option; // Variável auxiliar para armazenar qual função o usuário quer chamar
   Url url; // Instanciação do objteto url da classe Url
     
-  cout << "\n===== MENU ====\nDigite NEW para nova página)\nDigite BACK para voltar a página anterior)\nDigite FOWARD para avançar a página seguinte)\nDigite EXIT para sair)";
+  cout << "\n===== MENU ====\nDigite NEW para nova pagina)\nDigite BACK para voltar a pagina anterior)\nDigite FOWARD para ir a pagina seguinte)\nDigite EXIT para sair)\n";
 
   while (true) { // Loop principal
     cout << "\n> ";    
@@ -65,7 +65,7 @@ int main(){ // Função principal
 
     if(option == "NEW"){ // Verifica a opção escolhida pelo usuário
       string newUrl;
-      cout << "Digite a nova página: ";
+      cout << "Digite a nova pagina: ";
       cin >> newUrl;
       url.newPage(newUrl); // Chama o método para adicionar uma nova página
       url.getPage(); // Chama o método para exibir a página atual
@@ -79,7 +79,7 @@ int main(){ // Função principal
       cout << "\nObrigado por navegar conosco (: \nSaindo...";
       break;
     }else{
-      cout << "Erro: entrada inválida. Por favor, entre com um dos comandos informados acima, em maiúscula.";
+      cout << "Erro: entrada invalida. Por favor, entre com um dos comandos informados acima, em maiuscula.";
     }
   }
 
